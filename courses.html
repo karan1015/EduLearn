@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" type="x-icon" href="./images/logo.jpeg">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EduLearn - Courses</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<style>
+.courses-intro {
+    background-color: #f4f4f4;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.courses-intro .container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.courses-list {
+    padding: 60px 20px;
+}
+
+.courses-list .container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.course-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.course-item {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+    text-align: center;
+    width: 300px;
+}
+
+.course-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.course-item h3 {
+    padding: 20px;
+    font-size: 1.2em;
+}
+
+.course-item p {
+    padding: 0 20px 20px;
+    font-size: 1em;
+    color: #555;
+}
+
+.course-item .btn {
+    background-color: #007BFF;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    display: inline-block;
+}
+
+.course-item .btn:hover {
+    background-color: #0056b3;
+}
+
+
+</style>
+<body>
+    <header>
+        <div class="container">
+            <h1 class="logo">EduLearn</h1>
+            <nav>
+                <ul>
+                    <li><a href="./index.html">Home</a></li>
+                    <li><a href="./courses.html">Courses</a></li>
+                    <li><a href="./about.html">About</a></li>
+                    <li><a href="./contact.html">Contact</a></li>
+                    <li><a href="login.html" class="btn">Login</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <section class="courses-intro">
+        <div class="container">
+            <h2>Explore Our Courses</h2>
+            <p>Find the perfect course to enhance your skills and advance your career. Our diverse range of courses are taught by industry experts.</p>
+        </div>
+    </section>
+
+    <section class="courses-list">
+        <div class="container">
+            <div class="course-grid">
+                <div class="course-item">
+                    <img src="images/course1.jpeg" alt="Web Development">
+                    <h3>Web Development</h3>
+                    <p>Learn to build modern, responsive websites with HTML, CSS, and JavaScript.</p>
+                    <a href="web-development.html" class="btn">Learn More</a>
+                </div>
+                <div class="course-item">
+                    <img src="images/course2.png" alt="Python Programming">
+                    <h3>Python Programming</h3>
+                    <p>Master Python and develop real-world applications and data analysis projects.</p>
+                    <a href="python-programming.html" class="btn">Learn More</a>
+                </div>
+                <div class="course-item">
+                    <img src="images/course3.jpeg" alt="Data Science">
+                    <h3>Data Science</h3>
+                    <p>Explore data science techniques and tools to analyze and visualize data.</p>
+                    <a href="data-science.html" class="btn">Learn More</a>
+                </div>
+                <div class="course-item">
+                    <img src="images/course4.jpg" alt="Machine Learning">
+                    <h3>Machine Learning</h3>
+                    <p>Understand machine learning concepts and implement models using Python.</p>
+                    <a href="machine-learning.html" class="btn">Learn More</a>
+                </div>
+                <div class="course-item">
+                    <img src="images/course5.jpg" alt="Cyber Security">
+                    <h3>Cyber Security</h3>
+                    <p>Gain knowledge in protecting systems, networks, and data from cyber threats.</p>
+                    <a href="cyber-security.html" class="btn">Learn More</a>
+                </div>
+                <div class="course-item">
+                    <img src="images/course6.jpg" alt="Digital Marketing">
+                    <h3>Digital Marketing</h3>
+                    <p>Learn effective digital marketing strategies to grow your business online.</p>
+                    <a href="digital-marketing.html" class="btn">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 EduLearn. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

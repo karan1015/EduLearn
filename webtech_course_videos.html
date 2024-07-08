@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" type="x-icon" href="./images/logo.jpeg">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Technologies Course - EduLearn</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<style>
+
+.video-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.video-card {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    width: calc(50% - 20px);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.video-card h3 {
+    font-size: 1.25em;
+    margin-bottom: 10px;
+}
+
+</style>
+<body>
+    <header>
+        <div class="container">
+            <h1 class="logo">EduLearn</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="student_dashboard.html">Dashboard</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="course-section">
+        <div class="container">
+            <h2>Web Technologies Course Videos</h2>
+            <div class="video-grid">
+                <div class="video-card">
+                    <h3>Introduction to HTML & CSS</h3>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/mU6anWqZJcc" frameborder="0" allowfullscreen></iframe>
+                </div>
+                <div class="video-card">
+                    <h3>JavaScript Basics</h3>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/hdI2bqOjy3c" frameborder="0" allowfullscreen></iframe>
+                </div>
+                <div class="video-card">
+                    <h3>Responsive Web Design</h3>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/srvUrASNj0s" frameborder="0" allowfullscreen></iframe>
+                </div>
+                <!-- Add more Web Technologies video cards as needed -->
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 EduLearn. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

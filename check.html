@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" type="x-icon" href="./images/logo.jpeg">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EduLearn - Login</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: url('./images/background.jpg') no-repeat center center fixed;
+            background-size: cover;
+        }
+        header {
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 10px 20px;
+            color: white;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        .logo {
+            margin: 0;
+            font-size: 2em;
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: flex-end;
+        }
+        nav ul li {
+            margin-left: 20px;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-size: 1.2em;
+        }
+        nav ul li a.btn {
+            background-color: #007BFF;
+            padding: 10px 20px;
+            border-radius: 5px;
+        }
+        nav ul li a.btn:hover {
+            background-color: #0056b3;
+        }
+        .login-section {
+            padding: 60px 20px;
+            text-align: center;
+            background-color: rgba(255, 255, 255, 0.9);
+            margin: 50px auto;
+            border-radius: 10px;
+            max-width: 600px;
+        }
+        .login-section h2 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+        .login-options {
+            margin-bottom: 30px;
+        }
+        .login-btn {
+            padding: 15px 30px;
+            font-size: 1.2em;
+            margin: 10px;
+            cursor: pointer;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+        .login-btn:hover {
+            background-color: #0056b3;
+        }
+        .login-form {
+            display: none;
+        }
+        .login-form form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .login-form label {
+            font-size: 1.2em;
+            margin-bottom: 5px;
+            text-align: left;
+            width: 100%;
+        }
+        .login-form input {
+            padding: 10px;
+            margin-bottom: 20px;
+            font-size: 1em;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            width: 80%;
+        }
+        .login-form button {
+            padding: 15px 30px;
+            font-size: 1.2em;
+            color: white;
+            background-color: #007BFF;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .login-form button:hover {
+            background-color: #0056b3;
+        }
+        .login-form p {
+            margin-top: 20px;
+        }
+        footer {
+            background-color: rgba(0, 0, 0, 0.7);
+            color: white;
+            text-align: center;
+            padding: 10px 20px;
+            position: absolute;
+            width: 100%;
+            bottom: 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1 class="logo">EduLearn</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="courses.html">Courses</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="login.html" class="btn">Login</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <section class="login-section">
+        <div class="container">
+            <h2>Login</h2>
+            <p>Please select your role and login.</p>
+            <div class="login-options">
+                <button class="login-btn" onclick="showLogin('student')">Student Login</button>
+                <button class="login-btn" onclick="showLogin('trainer')">Trainer Login</button>
+            </div>
+            <div id="student-login" class="login-form">
+                <h3>Student Login</h3>
+                <form onsubmit="return validateStudentLogin()">
+                    <label for="student-username">Username:</label>
+                    <input type="text" id="student-username" required>
+                    
+                    <label for="student-password">Password:</label>
+                    <input type="password" id="student-password" required>
+                    
+                    <button type="submit">Login</button>
+                </form>
+                <p>New student? <a href="create_student_account.html">Create an account</a></p>
+            </div>
+            <div id="trainer-login" class="login-form">
+                <h3>Trainer Login</h3>
+                <form onsubmit="return validateTrainerLogin()">
+                    <label for="trainer-username">Username:</label>
+                    <input type="text" id="trainer-username" required>
+                    
+                    <label for="trainer-password">Password:</label>
+                    <input type="password" id="trainer-password" required>
+                    
+                    <button type="submit">Login</button>
+                </form>
+                <p>New trainer? <a href="create_trainer_account.html">Create an account</a></p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 EduLearn. All rights reserved.</p>
+        </div>
+    </footer>
+    
+    <script>
+        function showLogin(role) {
+            document.getElementById('student-login').style.display = 'none';
+            document.getElementById('trainer-login').style.display = 'none';
+            if (role === 'student') {
+                document.getElementById('student-login').style.display = 'block';
+            } else if (role === 'trainer') {
+                document.getElementById('trainer-login').style.display = 'block';
+            }
+        }
+        
+        function validateStudentLogin() {
+            // Add your student login validation logic here
+            return true;
+        }
+
+        function validateTrainerLogin() {
+            // Add your trainer login validation logic here
+            return true;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" type="x-icon" href="./images/logo.jpeg">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EduLearn - Login</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<style>
+    .login-section {
+        padding: 60px 20px;
+        text-align: center;
+    }
+    .login-section .container {
+        max-width: 800px;
+        margin: 0 auto;
+    }
+    .login-section h2 {
+        font-size: 2.5em;
+        margin-bottom: 20px;
+    }
+    .login-options {
+        margin-bottom: 30px;
+    }
+    .login-btn {
+        padding: 15px 30px;
+        font-size: 1.2em;
+        margin: 10px;
+        cursor: pointer;
+        background-color:  #007BFF;
+        color: white;
+        border: none;
+        border-radius: 5px;
+    }
+    .login-btn:hover {
+        background-color:  #0056b3;
+    }
+    .login-form {
+        display: none;
+    }
+    .login-form form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .login-form label {
+        font-size: 1.2em;
+        margin-bottom: 5px;
+        text-align: left;
+        width: 100%;
+    }
+    .login-form input {
+        padding: 10px;
+        margin-bottom: 20px;
+        font-size: 1em;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        width: 80%;
+    }
+    .login-form button {
+        padding: 15px 30px;
+        font-size: 1.2em;
+        color: white;
+        background-color:#fa8d28f4;;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    .login-form button:hover {
+        background-color:  #f58217f4;
+        
+    }
+</style>
+<body>
+    <header>
+        <div class="container">
+            <h1 class="logo">EduLearn</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="courses.html">Courses</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="login.html" class="btn">Login</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <section class="login-section">
+        <div class="container">
+            <h2>Login</h2>
+            <p>Please select your role and login.</p>
+            <div class="login-options">
+                <button class="login-btn" onclick="showLogin('student')">Student Login</button>
+                <button class="login-btn" onclick="showLogin('trainer')">Trainer Login</button>
+            </div>
+            <div id="student-login" class="login-form" style="display: none;">
+                <h3>Student Login</h3>
+                <form onsubmit="return validateStudentLogin()">
+                    <label for="student-username">Username:</label><p>#karan</p>
+                    <input type="text" id="student-username" required>
+                    
+                    <label for="student-password">Password:</label><p>#karan1015</p>
+                    <input type="password" id="student-password" required>
+                    
+                    <button type="submit">Login</button>
+                </form><br>
+                <p>New student? <a href="create_student_account.html">Create an account</a></p>
+            </div>
+            <div id="trainer-login" class="login-form" style="display: none;">
+                <h3>Trainer Login</h3>
+                <form onsubmit="return validateTrainerLogin()">
+                    <label for="trainer-username">Username:</label><p>#binu</p>
+                    <input type="text" id="trainer-username" required>
+                    
+                    <label for="trainer-password">Password:</label><p>#binu10</p>
+                    <input type="password" id="trainer-password" required>
+                    
+                    <button type="submit">Login</button>
+                </form><br>
+                <p>New trainer? <a href="create_trainer_account.html">Create an account</a></p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 EduLearn. All rights reserved.</p>
+        </div>
+    </footer>
+    
+    <script src="js/script.js">
+
+    </script>
+</body>
+</html>

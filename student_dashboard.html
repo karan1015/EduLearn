@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" type="x-icon" href="./images/logo.jpeg">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EduLearn - Student Dashboard</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<style>
+
+.dashboard-section {
+    padding: 60px 20px;
+    background-color: #f9f9f9;
+    min-height: 80vh;
+}
+
+.dashboard-section .container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.dashboard-section h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.dashboard {
+    display: flex;
+}
+
+.sidebar {
+    flex: 1;
+    background-color: #0d5280;
+    color: white;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    margin-bottom: 10px;
+}
+
+.sidebar ul li a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    padding: 10px;
+    border-radius: 4px;
+    background-color: #1e67c2;
+}
+
+.sidebar ul li a:hover {
+    background-color: #098dec;
+}
+
+.main-content {
+    flex: 3;
+    margin-left: 20px;
+}
+
+.main-content h3 {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+.main-content table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+.main-content table th,
+.main-content table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+}
+
+.main-content table th {
+    background-color:#0d5280;
+    color: white;
+}
+
+.main-content table td a {
+    color: #1a73e8;
+    text-decoration: none;
+}
+
+.main-content table td a:hover {
+    text-decoration: underline;
+}
+
+</style>
+<body>
+    <header>
+        <div class="container">
+            <h1 class="logo">EduLearn</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="courses.html">Courses</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="login.html" class="btn">Logout</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <section class="dashboard-section">
+        <div class="container">
+            <h2>Welcome, Student</h2>
+            <div class="dashboard">
+                <div class="sidebar">
+                    <ul>
+                        <li><a href="#">Dashboard</a></li>
+                        <li><a href="#">My Courses</a></li>
+                        <li><a href="#">Upcoming Classes</a></li>
+                        <li><a href="#">Profile</a></li>
+                        <li><a href="#">Settings</a></li>
+                    </ul>
+                </div>
+                <div class="main-content">
+                    <h3>My Courses</h3>
+                    <table>
+                        <tr>
+                            <th>Course Name</th>
+                            <th>Trainer</th>
+                            <th>Duration</th>
+                            <th>Details</th>
+                        </tr>
+                        <tr>
+                            <td>Python Programming</td>
+                            <td>Rajkumar Kannan</td>
+                            <td>3 Months</td>
+                            <td><a href="python_course_videos.html">View Videos</a></td>
+                        </tr>
+                        <tr>
+                            <td>Web Development</td>
+                            <td>Prejwal</td>
+                            <td>4 Months</td>
+                            <td><a href="webtech_course_videos.html">View Videos</a></td>
+                        </tr>
+                        <!-- Add more courses as needed -->
+                    </table>
+                    
+                    <h3>Upcoming Classes</h3>
+                    <table>
+                        <tr>
+                            <th>Course</th>
+                            <th>Date</th>
+                            <th>Time</th>
+                            <th>Link</th>
+                        </tr>
+                        <tr>
+                            <td>Python Programming</td>
+                            <td>June 1, 2024</td>
+                            <td>10:00 AM</td>
+                            <td><a href="https://zoom.us/j/1234567890" target="_blank">Join Class</a></td>
+                        </tr>
+                        <tr>
+                            <td>Web Development</td>
+                            <td>June 2, 2024</td>
+                            <td>2:00 PM</td>
+                            <td><a href="https://zoom.us/j/0987654321" target="_blank" >Join Class</a></td>
+                        </tr>
+                        <!-- Add more classes as needed -->
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 EduLearn. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
